@@ -5,7 +5,5 @@ apt install nodejs npm
 git clone https://github.com/NovaFlare-Engine-Concentration/NovaFlare-Online-Server.git
 cd NovaFlare-Online-Server
 
-npm config set package-lock true
-npm ci
-
-npm start
+docker build -t OnlineServer .
+docker run -p 2567:2567 OnlineServer
